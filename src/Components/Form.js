@@ -58,21 +58,15 @@ function Form({ setToggle }) {
                 return res;
 
             } catch (err) {
-                setNameStatus([...[err]])
+                setNameStatus([...["Server is not working"]])
             }
         }
         const callFunc = async (formData) => {
             await postData(formData)
-            // setToggle(true)
-            // setBtn(true)
-            // setCount(!count)
         }
         callFunc(formData)
 
     }
-
-    console.log(validateName)
-    console.log(typeof inputData)
     return (
         <>
             <form className="form" onSubmit={handleUpload}>

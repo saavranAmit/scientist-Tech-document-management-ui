@@ -36,7 +36,8 @@ export default function SecForm() {
                 return res;
 
             } catch (err) {
-                // setNameStatus([...[err]])
+                setSelectStatus([...["Server is not working"]])
+
             }
         }
         const callFunc = async (formData, isId) => {
