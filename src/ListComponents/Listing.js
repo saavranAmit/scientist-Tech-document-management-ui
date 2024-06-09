@@ -12,6 +12,7 @@ export default function ListingData({ setToggle }) {
     const [versionData, setVersionData] = useState([])
     const [toggleVersion, setToggleVer] = useState(false)
     const [loading, setLoading] = useState(true)
+    const [loadingCon, setLoadingCon] = useState("Loading...")
     const [error, setError] = useState("")
 
     const handleVersion = (id) => {
@@ -33,7 +34,8 @@ export default function ListingData({ setToggle }) {
                 return res;
 
             } catch (err) {
-                setError("Failed to fetch data")
+                setLoadingCon(null)
+                setError("Server Issue! Can't fetch data.")
             }
         }
         const callFunc = async () => {
@@ -49,7 +51,7 @@ export default function ListingData({ setToggle }) {
         <>
             <div className="list">
                 <div className="list-container">
-                    {loading ? <div><h2>Loading...</h2><h2>{error}</h2></div> :
+                    {loading ? <div><h2>{loadingCon}</h2><h2>{error}</h2></div> :
 
                         <table className="styled-table">
                             <thead>
