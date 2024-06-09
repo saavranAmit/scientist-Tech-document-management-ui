@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Context } from "../App";
 export default function Header({ setToggle }) {
-    const { btn, setBtn } = useContext(Context)
+    const { btn, setBtn, setCount, count } = useContext(Context)
 
     const handleClick = () => {
         setToggle(false)
@@ -11,6 +11,7 @@ export default function Header({ setToggle }) {
     const handleBack = () => {
         setToggle(true)
         setBtn(true)
+        setCount(!count)
     }
     return (
         <div className="header">

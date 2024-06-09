@@ -46,18 +46,18 @@ export default function ListingData({ setToggle }) {
         <>
             <div className="list">
                 <div className="list-container">
+                    {loading ? <h2>Loading...</h2> :
 
-                    <table className="styled-table">
-                        <thead>
-                            <tr>
-                                <th>Document Name</th>
-                                <th>Created At</th>
-                                <th>Total Files</th>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        {loading ? <h2 style={{ fontWeight: "400", alignItems: "center", marginTop: "20px", background: "none" }}>Loading...</h2> :
+                        <table className="styled-table">
+                            <thead>
+                                <tr>
+                                    <th>Document Name</th>
+                                    <th>Created At</th>
+                                    <th>Total Files</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
                             <tbody>
 
                                 {totalData.map((data, i) => {
@@ -75,8 +75,8 @@ export default function ListingData({ setToggle }) {
                                         </>
                                     )
                                 })}
-                            </tbody>}
-                    </table>
+                            </tbody>
+                        </table>}
 
                 </div>
 

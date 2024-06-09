@@ -19,23 +19,23 @@ export default function Versions({ versionData, setToggleVer }) {
                             </tr>
                         </thead>
                         <tbody>
+                            {versionData && <>
+                                {versionData.map((data, i) => {
+                                    return (
+                                        data.versions.slice(0).reverse().map((d, i) => {
+                                            return (
+                                                <>
+                                                    <tr key={i} className="active-row">
+                                                        <td>{d.version}</td>
+                                                        <td>{d.type}</td>
+                                                        <td>{d.file_path}</td>
+                                                        <td>{d.uploaded_at}</td>
 
-                            {versionData.map((data, i) => {
-                                return (
-                                    data.versions.slice(0).reverse().map((d, i) => {
-                                        return (
-                                            <>
-                                                <tr key={i} className="active-row">
-                                                    <td>{d.version}</td>
-                                                    <td>{d.type}</td>
-                                                    <td>{d.file_path}</td>
-                                                    <td>{d.uploaded_at}</td>
-
-                                                </tr>
-                                            </>
-                                        )
-                                    }))
-                            })}
+                                                    </tr>
+                                                </>
+                                            )
+                                        }))
+                                })}</>}
                         </tbody>
                     </table>
 
