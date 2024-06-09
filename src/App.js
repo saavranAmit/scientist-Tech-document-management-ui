@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import './style.css';
+import Home from "./Components/Home"
+import React, { useState, createContext } from "react";
+
+export const Context = createContext()
+
+
 
 function App() {
+  const [btn, setBtn] = useState(true)
+  const [addBtn, setAddBtn] = useState(false)
+  const [name, setName] = useState("")
+  const [isId, setIsId] = useState()
+  const [count, setCount] = useState(false)
+  const [validateName, setValidateName] = useState([])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Context.Provider value={{ validateName, setValidateName, btn, setBtn, name, setName, addBtn, setAddBtn, isId, setIsId, setCount, count }}>
+      <div >
+        <Home />
+      </div>
+    </Context.Provider>
+
+
+
   );
 }
 

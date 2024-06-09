@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f5f5;
+}
+
+:root {
+    --arrow-bg: #0ec297;
+    --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+    --option-bg: #fff;
+    --select-bg: rgba(255, 255, 255);
+}
+
+/*************************************** BUTTON CSS *********************************************************/
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    margin-top: 1em;
+    border-radius: 0.25em;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    font-weight: 500;
+}
+
+.btn-primary {
+    color: #fff;
+    background: #009879;
+    /* background: #168083;
+    background: #0ec297;
+    background: #9a9a9e; */
+
+}
+
+.btn-primary:hover {
+    /* background: #009879; */
+    background: #168083;
+    transition: backgroung 0.5s ease-in;
+}
+
+.home {
+    width: 100%;
+}
+
+/**************************************HEADER CSS *******************************************************/
+
+.header {
+    width: 100%;
+    height: 70px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 5px 10px 0px #00000029;
+    background: #fff;
+
+}
+
+.sub-header {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub-header h1,
+h2 {
+    color: #168083;
+    font-size: 2.6rem;
+}
+
+/************************************** FORM CSS ************************************************************/
+
+.form {
+    width: 100%;
+    height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #fff;
+}
+
+.form-container {
+    width: 60%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.form-container input {
+    display: block;
+    width: 100%;
+    border: none;
+    border: 1px solid #0ec297;
+    padding: 1rem 1rem;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 1rem;
+    color: #101010;
+    font-weight: 500;
+    font-size: 1.6rem;
+    border-radius: 0.25em;
+}
+
+.form-container input::placeholder {
+    color: #8d8d8d;
+}
+
+.drag-input {
+    display: hidden;
+    width: 100%;
+    border: none;
+    border: 1px solid #0ec297;
+    padding: 1rem 0;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 1rem;
+    color: #555;
+    font-weight: 500;
+}
+
+select {
+    appearance: none;
+    border: 1px solid #0ec297;
+    outline: 0;
+    font-size: 1.6rem;
+    width: 100%;
+    padding: 1rem 4rem 1rem 1rem;
+    background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+        linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+    color: #101010;
+    border-radius: 0.25em;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    option {
+        color: inherit;
+        background-color: var(--option-bg);
+    }
+}
+
+
+.dropzone {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50%;
+    border: 1px solid #0ec297;
+    border-radius: 0.25em;
+
+}
+
+.uploads {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #0ec297;
+    border-radius: 0.25em;
+
+}
+
+.uploads li {
+    display: block;
+    font-size: 3rem;
+    color: #8d8d8d;
+}
+
+.drop-content {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.dropzone h2 {
+    color: #88c2bb;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.dropzone h1 {
+    color: #88c2bb;
+    font-size: 2rem;
+}
+
+.dropzone input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #0ec297;
+    padding: 1rem 0;
+    box-shadow: none;
+    outline: none;
+
+    color: #88c2bb;
+    font-size: 1.7rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+}
+
+.active {
+    background-color: #5f5959;
+}
+
+
+
+/****************************************List Component Css *************************************************/
+
+.list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background: none;
+}
+
+.list-container {
+    background: #fff;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    flex-direction: left;
+    overflow-x: auto;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    font-size: 1.2rem;
+    max-width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    text-align: center;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+
+.styled-table tbody tr.active-row {
+    font-weight: 500;
+    color: #009879;
+}
+
+
+
+/****************************************SUB LIST *************************************************/
+
+
+.sub-list {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    background: none;
+    position: fixed;
+    top: 0px;
+    background: #0ec297;
+    overflow: auto;
+}
+
+
+.sub-list::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+.subList-container {
+    margin-top: 100px;
+    background: #fff;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    flex-direction: left;
+    margin-bottom: 20px;
+}
+
+.cross-btn {
+    border-radius: 0.25em 0 0 0.25em;
+    margin-bottom: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+
+/*********************************************************************************************************/
+
+.sec-form {
+    width: 100%;
+    height: calc(100vh - 100px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #fff;
+    /* position: absolute; */
+    position: fixed;
+    top: 100px;
+}
+
+.sec-form-container {
+    width: 60%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.sec-form-container .userName {
+    color: #fff;
+    background: #009879;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+
+
+
+/***************************************************************************************************************************/
+
+
+@media screen and (max-width: 776px) {
+
+    .sub-header {
+        width: 90%;
+    }
+
+    .subList-container {
+        width: 90%;
+    }
+
+    .form-container {
+        width: 90%;
+    }
+
+    .list-container {
+        width: 90%;
+    }
+
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #dddddd;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .subList-container {
+        width: 100%;
+    }
+
+    .form-container {
+        width: 96%;
+    }
+
+    .list-container {
+        width: 100%;
+    }
+
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #dddddd;
+    }
+}
